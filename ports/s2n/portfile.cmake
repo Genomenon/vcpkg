@@ -1,14 +1,17 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO aws/s2n-tls
-    REF 4513f8d707a68388990886d353e7cfe46cc6454b # v1.1.1
-    SHA512 6586e330733982ed3b70fd320e63575639d5793d69ffa06b2a46ed487d55d8271b46df611d62cc48410654b394d599de65edd9cdc860dea13255161d843f1f48
+    REF 7d02417a575b62c50ba08d791d11495238164815 # v1.3.1
+    SHA512 27770b5281bc9c4d4988ad7bdd8217722b24ef98878ac8262ad6130c42cdd5b81a0ad820916fb3c009fcf9809fa1c2548d602c03ddbfba4462380fd2faa9e470
     PATCHES fix-cmake-target-path.patch
             remove-libcrypto-messages.patch
 )
 
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
+    OPTIONS
+        ${FEATURE_OPTIONS}
+        -DUNSAFE_TREAT_WARNINGS_AS_ERRORS=OFF
 )
 
 vcpkg_cmake_install()
