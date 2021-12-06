@@ -3,8 +3,8 @@ vcpkg_buildpath_length_warning(37)
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO aws/aws-sdk-cpp
-    REF b0204a7b6a33211f533a175e987a755f714bf7f3 # 1.9.96
-    SHA512 456d3fc256a5a26843ecf16014242514b165ae5fa35f088d57aa54a744d19e2c38bd0bed9b6a4b76948c8a49cf87a06a4c722be5a910ed41dfd9c9b9a66b398d
+    REF 84522c1d9e8203f280d74db741dd92d8b3d6bf5f # v1.9.159
+    SHA512 5aaddd0e318a9b6abb89c57d0887b0123a371cbd7825870d5c2a14561e8f1f4c90ff78057576ea3cb2dfcdf656f57fd1c4545f6b1ecdc21b36def316f5c98642
     PATCHES
         fix-config.patch
         patch-relocatable-rpath.patch
@@ -49,7 +49,7 @@ vcpkg_cmake_install()
 
 foreach(TARGET IN LISTS BUILD_ONLY)
     vcpkg_cmake_config_fixup(PACKAGE_NAME "aws-cpp-sdk-${TARGET}" CONFIG_PATH "lib/cmake/aws-cpp-sdk-${TARGET}" DO_NOT_DELETE_PARENT_CONFIG_PATH)
-endforeach() 
+endforeach()
 vcpkg_cmake_config_fixup(PACKAGE_NAME "AWSSDK" CONFIG_PATH "lib/cmake/AWSSDK")
 
 vcpkg_copy_pdbs()
