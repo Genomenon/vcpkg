@@ -1162,7 +1162,7 @@
     },
     "bshoshany-thread-pool": {
       "baseline": "2.0.0",
-      "port-version": 0
+      "port-version": 1
     },
     "bsio": {
       "baseline": "1.0.0",

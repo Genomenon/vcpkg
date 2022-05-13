@@ -1,9 +1,9 @@
 #header-only library
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO bshoshany/thread-pool
-    REF v2.0.0
-    SHA512 eac1674ea999d25d8d0b8f1b24714830330ba4d345e3f730e49359bae89d9259e429d48357a45f7b4355cbbe1a63f04e7fe2c4e0be08b3bbea51018c62721fcc
+    REPO SandSnip3r/thread-pool
+    REF f012a783a1752ce562d8c83b48c5675e318c60d8
+    SHA512 20dbd63997da1b614b32a56b11ec33cdea692245ed319cdd573806e9227f52ba32aeb736bfba635a23537fee041c637c642b5e74613a0cd3c5f62a2ba326e83b
     HEAD_REF master
 )
 
